@@ -46,7 +46,7 @@ const imagensFixas = {
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUGfe_klBhVNWgDPWL-ym64mIVcwrimk5AXg&s",
   "Tainara":
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn6VBm-J3wCEJS_PJQCkcCRX1qpDDifiYaMA&s",
-  "Letícia":
+  "Leticia":
     "https://f.i.uol.com.br/fotografia/2023/07/23/169013086264bd59ae0c823_1690130862_3x2_md.jpg",
   "Luciana":
     "https://www.esporteemacaooficial.com.br/uploads/images/2024/07/luciana-segue-com-os-treinamentos-da-selecao-brasileira-feminina-1f34a.jpg"
@@ -54,7 +54,7 @@ const imagensFixas = {
 };
 
 const jogadorasPorPosicao = {
-  Goleiro: ["Letícia", "Camila", "Luciana"],
+  Goleiro: ["Leticia", "Camila", "Luciana"],
   Zagueiro: ["Rafaelle", "Lauren", "Tainara"],
   "Lateral Esq": ["Tamires", "Yasmim"],
   "Lateral Dir": ["Antonia", "Bruna Benites"],
