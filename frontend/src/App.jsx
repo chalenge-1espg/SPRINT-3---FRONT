@@ -6,7 +6,11 @@ import Error from './routes/Error'
 import Cadastro from './routes/Cadastro' 
 import Escudo from './routes/Escudo'
 import Login from './routes/Login'
+import Escalacao from './routes/Escalacao'
+import html2canvas from "html2canvas";
 import axios from "axios";
+import { Dialog } from "@headlessui/react";
+
 function App() {
  
 
@@ -28,6 +32,8 @@ function App() {
         <Route path="/cadastro" element={<Cadastro/>}/>
         
         <Route path="/escudo" element={<Escudo/>}/>
+
+        <Route path="/escalacao" element={<Escalacao/>}/>
         
     
       </Routes>

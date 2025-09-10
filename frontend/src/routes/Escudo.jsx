@@ -111,7 +111,7 @@ const TelaEscolhaEscudo = () => {
                 ANEXAR IMAGEM!
             </button>
             
-            <Link to="/proxima-etapa">
+            <Link to="/Escalacao">
                 <button className="bg-green-500 text-black font-bold py-2 px-4 rounded-xl transition duration-300 transform hover:scale-105">
                     Próximo
                 </button>

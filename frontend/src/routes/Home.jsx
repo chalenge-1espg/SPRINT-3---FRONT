@@ -85,7 +85,7 @@ const TelaFutebol = ({ onNavigate }) => {
             Crie seu time e comece a competir com seus amigos.
           </p>
           <Link
-          to="/login"
+          to="/Cadastro"
           className="inline-block mt-3 bg-yellow-400 text-black px-6 py-2 rounded-xl font-bold text-center"
           >
             CRIAR
