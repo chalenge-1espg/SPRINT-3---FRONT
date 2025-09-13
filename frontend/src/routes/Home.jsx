@@ -32,14 +32,9 @@ const TelaFutebol = () => {
   useEffect(() => {
     const fetchPartidas = async () => {
       try {
-        const response = await fetch(
-          "https://api.football-data.org/v4/matches",
-          {
-            headers: {
-              "X-Auth-Token": API_KEY,
-            },
-          }
-        );
+        const response = await fetch("https://api.football-data.org/v4/matches", {
+          headers: { "X-Auth-Token": API_KEY },
+        });
         const data = await response.json();
 
         if (data.matches) {
@@ -66,11 +61,7 @@ const TelaFutebol = () => {
       try {
         const response = await axios.get(
           "https://api.football-data.org/v4/competitions/BRA_FEM/matches?season=2025",
-          {
-            headers: {
-              "X-Auth-Token": API_KEY,
-            },
-          }
+          { headers: { "X-Auth-Token": API_KEY } }
         );
         setJogosFemininos(response.data.matches.slice(0, 5));
       } catch (error) {
@@ -112,14 +103,12 @@ const TelaFutebol = () => {
   }, [noticias]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-800 to-green-900 text-white p-0 m-0 pt-16"> {/* Ajuste aqui */}
+    <div className="min-h-screen bg-gradient-to-b from-gray-800 to-green-900 text-white m-0 p-0 pt-16 overflow-x-hidden">
       {/* Banner */}
-      <div className="relative rounded-xl text-center mb-0 overflow-hidden shadow-lg">
+      <div className="relative rounded-xl text-center overflow-hidden shadow-lg mb-6">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(https://i.ibb.co/YZnnpwP/banner-futebol.jpg)`,
-          }}
+          style={{ backgroundImage: `url(https://i.ibb.co/YZnnpwP/banner-futebol.jpg)` }}
         >
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
@@ -127,9 +116,7 @@ const TelaFutebol = () => {
         <div className="relative z-10 p-6 text-white">
           <h2 className="text-2xl font-bold">⚽ MONTE SEU ELENCO</h2>
           <p className="mt-2">SEJA O TÉCNICO DO SEU TIME!</p>
-          <p className="text-sm mt-1">
-            Crie seu time e comece a competir com seus amigos.
-          </p>
+          <p className="text-sm mt-1">Crie seu time e comece a competir com seus amigos.</p>
           <Link
             to="/Cadastro"
             className="inline-block mt-3 bg-yellow-400 text-black px-6 py-2 rounded-xl font-bold hover:bg-yellow-500 transition"
@@ -139,7 +126,7 @@ const TelaFutebol = () => {
         </div>
       </div>
 
-      {/* Vantagens da assinatura */}
+      {/* Vantagens */}
       <h3 className="text-lg font-bold mb-3">✨ VANTAGENS DA ASSINATURA</h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
         <div className="bg-pink-700 p-4 rounded-xl text-center shadow-md">
@@ -148,23 +135,17 @@ const TelaFutebol = () => {
             Ganhe o dobro de moedas no início da temporada e acesso exclusivo!
           </p>
         </div>
-
         <div className="bg-yellow-600 p-4 rounded-xl text-center shadow-md">
           <h4 className="font-bold text-lg">🎟️ Ingresso Para um Jogo</h4>
-          <p className="text-sm mt-2">
-            Ganhe ingressos para jogos do seu time favorito.
-          </p>
+          <p className="text-sm mt-2">Ganhe ingressos para jogos do seu time favorito.</p>
         </div>
-
         <div className="bg-purple-700 p-4 rounded-xl text-center shadow-md">
           <h4 className="font-bold text-lg">📊 Análise e Estatísticas</h4>
-          <p className="text-sm mt-2">
-            Dados profissionais sobre o desempenho do seu time.
-          </p>
+          <p className="text-sm mt-2">Dados profissionais sobre o desempenho do seu time.</p>
         </div>
       </div>
 
-      {/* Notícia em destaque */}
+      {/* Notícias */}
       <h3 className="text-lg font-bold mb-3">📰 NOTÍCIAS</h3>
       {noticiaDestaque ? (
         <div className="bg-green-800 rounded-xl p-4 mb-6 flex items-center space-x-4 shadow-md">
@@ -183,7 +164,7 @@ const TelaFutebol = () => {
         <p className="text-gray-300 mb-6">Carregando notícia em destaque...</p>
       )}
 
-      {/* Carrossel de partidas */}
+      {/* Carrossel */}
       <h3 className="text-lg font-bold mb-3">🏆 JOGOS EM DESTAQUE</h3>
       <div className="relative w-full h-56 rounded-xl overflow-hidden mb-6 shadow-md">
         {noticias.length > 0 ? (
@@ -207,7 +188,7 @@ const TelaFutebol = () => {
         )}
       </div>
 
-      {/* Jogos do Brasileirão Feminino */}
+      {/* Jogos Brasileirão Feminino */}
       <h3 className="text-lg font-bold mb-3">⚽ BRASILEIRÃO FEMININO - PRÓXIMOS JOGOS</h3>
       <div className="space-y-4 mb-6">
         {jogosFemininos.length > 0 ? (
@@ -244,7 +225,7 @@ const TelaFutebol = () => {
         )}
       </div>
 
-      {/* Vídeo do canal */}
+      {/* Vídeo */}
       <div className="bg-pink-600 p-4 rounded-xl text-center mb-6 shadow-md">
         <h3 className="font-bold mb-2">📺 CONFIRA O NOSSO VÍDEO</h3>
         <iframe
@@ -261,9 +242,13 @@ const TelaFutebol = () => {
 
       {/* Botões inferiores */}
       <div className="flex justify-around mt-4">
-        <button className="bg-green-700 px-6 py-2 rounded-full font-bold hover:bg-green-800 transition">
+        <Link
+          to="/Escalacao"
+          className="bg-green-700 px-6 py-2 rounded-full font-bold hover:bg-green-800 transition"
+        >
           Escalações
-        </button>
+        </Link>
+
         <button className="bg-pink-700 px-6 py-2 rounded-full font-bold hover:bg-pink-800 transition">
           Adicionar Amigo
         </button>
