@@ -1,6 +1,7 @@
 // Escalacao.jsx
 import React, { useState, useEffect } from "react";
 import html2canvas from "html2canvas";
+import { useNavigate } from "react-router-dom"; // pode remover se não usar
 
 // ✅ IMAGENS FIXAS DAS JOGADORAS
 const imagensFixas = {
@@ -22,10 +23,6 @@ const imagensFixas = {
     "https://pbs.twimg.com/profile_images/1813036866809028608/fdL5_Jpq_400x400.jpg",
   "Adriana":
     "https://s2-ge.glbimg.com/_k3V3bKJqDx-MV-lBLLPtJgr8R8=/0x0:640x506/600x0/smart/filters:gifv():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2023/X/y/VAzyKeT1m4sAa3UflCIA/339544313-2321885581331390-2863101517711701915-n.jpg",
-  "Ary Borges":
-    "https://s2-gshow.glbimg.com/Q7gH1jxtbz_3cpBVtUgKrh0B1_A=/0x0:1080x1350/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/B/M/B4dsi8RcecKQm0FcpyJw/ary-borges-instagram.jpg",
-  "Kerolin":
-    "https://upload.wikimehttps://media.gettyimages.com/id/1556725548/pt/foto/brisbane-australia-kerolin-of-brazil-poses-for-a-portrait-during-the-official-fifa-womens.jpg?s=612x612&w=gi&k=20&c=VYy4Id1oU0ZdZDkUqNQd8dGk0E3uJBO_jek8o-uAtNs=dia.org/wikipedia/commons/thumb/4/47/Kerolin_Ferraz.jpg/240px-Kerolin_Ferraz.jpg",
   "Letícia":
     "https://f.i.uol.com.br/fotografia/2023/07/23/169013086264bd59ae0c823_1690130862_3x2_md.jpgg",
   "Camila":
