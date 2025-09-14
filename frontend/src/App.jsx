@@ -1,7 +1,6 @@
 // src/App.jsx
 import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-
 import Escalacao from "./routes/Escalacao";
 import Login from "./routes/Login";
 import Principal from "./routes/Home";
