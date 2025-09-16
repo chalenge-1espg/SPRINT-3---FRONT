@@ -14,7 +14,7 @@ export default function Nav() {
 
           {/* Texto */}
           <h1 className="text-white font-extrabold text-2xl tracking-wide">
-            FutBolinhas
+            FutBolinas
           </h1>
         </div>
       </div>
