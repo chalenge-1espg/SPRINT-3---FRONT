@@ -8,6 +8,7 @@ import Escudo from "./routes/Escudo";
 import Error from "./routes/Error";
 import Nav from "./components/Nav";
 import Cadastro from "./routes/Cadastro";
+import Chat from "./routes/Chat";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/home" element={<Principal />} />
           <Route path="/escudo" element={<Escudo />} />
           <Route path="/escalacao" element={<Escalacao />} />
+          <Route path="/chat" element={<Chat />} />
 
           {/* Página de erro para rotas inexistentes */}
           <Route path="*" element={<Error />} />
