@@ -9,6 +9,7 @@ import Error from "./routes/Error";
 import Nav from "./components/Nav";
 import Cadastro from "./routes/Cadastro";
 import Chat from "./routes/Chat";
+import Register from "./routes/Register";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/escudo" element={<Escudo />} />
           <Route path="/escalacao" element={<Escalacao />} />
           <Route path="/chat" element={<Chat />} />
+          <Route path="/register" element={<Register />} />
 
           {/* Página de erro para rotas inexistentes */}
           <Route path="*" element={<Error />} />
