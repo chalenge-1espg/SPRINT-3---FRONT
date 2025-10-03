@@ -53,3 +53,4 @@ def chat():
 if __name__ == "__main__":
     # Inicia o Flask
     app.run(port=5000, debug=True)
+    
