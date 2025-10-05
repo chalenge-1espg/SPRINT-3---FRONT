@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 // import html2canvas from "html2canvas"; // A função 'html2canvas' será chamada diretamente.
 import { Link } from "react-router-dom";
-import { Zap } from "lucide-react";
+import { Zap, Home } from "lucide-react"; // ⬅️ ÍCONE HOME
 
 // ✅ Imagens fixas das jogadoras (Mantido)
 const imagensFixas = {
@@ -11,7 +11,7 @@ const imagensFixas = {
     "Debinha": "https://img.olympics.com/images/image/private/t_1-1_300/f_auto/primary/s4j4ovxn1dfsx1bbgxd4",
     "Geyse": "https://midias.correiobraziliense.com.br/_midias/png/2023/07/18/675x450/1_geyce-28517551.png",
     "Antonia": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9BdzZ0wDIMjRKqEApPex0PGkm6wuvag8K7XA8l4YdKoFpwTWYWQusrTxWE1Zmqo9c5cU&usqp=CAU",
-    "Rafaelle": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTqHIoaUJhAmGtTMYoTBmFDchbW_oZF2jyRZtwHQygjvlWg-P-g96eZjRzTwHQygjvlWg-P-g96eZjRjRfsgD3cQM7XQozA-4NthJGm0fe4VrJIOLE0E4iKyiaXpYMA",
+    "Rafaelle": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTqHIoaUJhAmGtTMYoTBmFDchbW_oZF2jyRZtwHQygjvlWg-P-g96eZjRzTwHQygjvlWg-P-PygjvlWg-P-g96eZjRjRfsgD3cQM7XQozA-4NthJGm0fe4VrJIOLE0E4iKyiaXpYMA",
     "Andressa Alves": "https://midias.correiobraziliense.com.br/_midias/png/2023/07/18/1000x1000/1_andressa_alves-28517463.png?20230718122116",
     "Tamires": "https://pbs.twimg.com/profile_images/1813036866809028608/fdL5_Jpq_400x400.jpg",
     "Adriana": "https://s2-ge.glbimg.com/_k3V3bKJqDx-MV-lBLLPtJgr8R8=/0x0:640x506/600x0/smart/filters:gifv():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2023/X/y/VAzyKeT1m4sAa3UflCIA/339544313-2321885581331390-2863101517711701915-n.jpg",
@@ -243,10 +243,25 @@ export default function Escalacao() {
                 })}
             </div>
 
-            {/* BOTÕES (Mantido) */}
-            <div className="flex gap-4 mt-8">
-                <button onClick={exportarImagem} className="bg-pink-600 px-6 py-3 rounded-full text-white font-extrabold hover:bg-pink-700 transition transform hover:scale-[1.02] shadow-xl shadow-pink-300/50 uppercase">Exportar Escalação</button>
-                <Link to="/Escudo" className="bg-gray-300 px-6 py-3 rounded-full text-gray-800 font-semibold hover:bg-gray-400 transition shadow-lg uppercase">Editar Escudo</Link>
+            {/* BOTÕES */}
+            <div className="flex flex-col gap-4 mt-8 w-full max-w-xs"> 
+                
+                {/* NOVO BOTÃO HOME (COR ROSA/MAGENTA) */}
+                <Link 
+                    to="/home" 
+                    className="flex items-center justify-center gap-2 bg-fuchsia-600 px-6 py-3 rounded-3xl text-white font-extrabold hover:bg-fuchsia-700 transition transform hover:scale-[1.02] shadow-xl shadow-fuchsia-300/50 uppercase tracking-wider text-lg"
+                >
+                    <Home className="w-6 h-6"/>
+                    Home
+                </Link>
+
+                {/* BOTÕES ORIGINAIS */}
+                <button onClick={exportarImagem} className="bg-pink-600 px-6 py-3 rounded-3xl text-white font-extrabold hover:bg-pink-700 transition transform hover:scale-[1.02] shadow-xl shadow-pink-300/50 uppercase tracking-wider text-lg">
+                    Exportar Escalação
+                </button>
+                <Link to="/Escudo" className="bg-gray-300 px-6 py-3 rounded-3xl text-gray-800 font-semibold hover:bg-gray-400 transition shadow-lg uppercase tracking-wider text-lg">
+                    Editar Escudo
+                </Link>
             </div>
         </div>
     );
