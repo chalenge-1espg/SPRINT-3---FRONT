@@ -52,46 +52,33 @@ const MOCK_JOGOS_RECENTES = [
 const MOCK_PROXIMOS_JOGOS = [
     {
         id: 101,
-        time_casa: { nome: "Corinthians" },
-        time_visitante: { nome: "Ferroviária" },
-        campeonato: "Brasileirão Feminino A1 - SEMIFINAL (Volta)",
-        data: "2025-10-05T16:00:00-03:00", // 05/Outubro, 16h00
+        time_casa: { nome: "Santa Fe" },
+        time_visitante: { nome: "Corinthians" },
+        campeonato: "Copa Libertadores Feminina - FASE DE GRUPOS",
+        data: "2025-10-08T21:00:00-03:00", // 05/Outubro, 16h00
     },
     {
         id: 102,
-        time_casa: { nome: "Internacional" },
-        time_visitante: { nome: "Palmeiras" },
+        time_casa: { nome: "São Paulo" },
+        time_visitante: { nome: "Colo-Colo" },
         campeonato: "Copa Libertadores Feminina - FASE DE GRUPOS",
-        data: "2025-10-10T19:30:00-03:00", // 10/Outubro, 19h30
+        data: "2025-10-06T20:00:00-03:00", // 10/Outubro, 19h30
     },
     {
         id: 103,
-        time_casa: { nome: "Santos" },
-        time_visitante: { nome: "Red Bull Bragantino" },
-        campeonato: "Paulista Feminino - QUARTAS DE FINAL",
-        data: "2025-10-14T15:00:00-03:00", // 14/Outubro, 15h00
+        time_casa: { nome: "Ferroviária" },
+        time_visitante: { nome: "Boca Juniors" },
+        campeonato: "Copa Libertadores Feminina - FASE DE GRUPOS",
+        data: "2025-10-08T16:00:00-03:00", // 14/Outubro, 15h00
     },
     {
         id: 104,
-        time_casa: { nome: "Universidade de Chile" },
-        time_visitante: { nome: "Corinthians" },
+        time_casa: { nome: "Club Olimpia" },
+        time_visitante: { nome: "São Paulo" },
         campeonato: "Copa Libertadores Feminina - FASE DE GRUPOS",
-        data: "2025-10-18T21:00:00-03:00", // 18/Outubro, 21h00
+        data: "2025-10-09T20:00:00-03:00", // 18/Outubro, 21h00
     },
-    {
-        id: 105,
-        time_casa: { nome: "Ferroviária" },
-        time_visitante: { nome: "Santa Fe" },
-        campeonato: "Copa Libertadores Feminina - FASE DE GRUPOS",
-        data: "2025-10-22T17:00:00-03:00", // 22/Outubro, 17h00
-    },
-    {
-        id: 106,
-        time_casa: { nome: "Corinthians" },
-        time_visitante: { nome: "Internacional" },
-        campeonato: "Brasileirão Feminino A1 - FINAL (Ida)",
-        data: "2025-10-27T20:30:00-03:00", // 27/Outubro, 20h30
-    },
+
 ];
 // ----------------------------------------------------------------------------------
 
@@ -156,6 +143,9 @@ const TelaFutebolFeminino = () => {
         
         'Universidade de Chile': 'https://www.ogol.com.br/img/logos/equipas/2273_imgbank_1750938169.png',
         'Santa Fe': 'https://www.ogol.com.br/img/logos/equipas/2302_imgbank_1688124532.png',
+        'Colo-Colo': 'https://upload.wikimedia.org/wikipedia/pt/e/e8/Colo-Colo_Futbol_Club.png',
+        'Boca Juniors': 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Boca_Juniors_logo18.svg/1014px-Boca_Juniors_logo18.svg.png',
+        'Club Olimpia': 'https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_de_Olimpia_2022_PNG_HD.png',
     };
 
     
@@ -497,7 +487,7 @@ const TelaFutebolFeminino = () => {
                 width="100%"
                 height="250"
                 className="rounded-xl border-4 border-fuchsia-500/50 shadow-inner shadow-fuchsia-900"
-                src="https://www.youtube.com/embed/pr4wX4hCVLs"
+                src="https://www.youtube.com/embed/OwIKvXW6aYU"
                 title="Passa a Bola"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
